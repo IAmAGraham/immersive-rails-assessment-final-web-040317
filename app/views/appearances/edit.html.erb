@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Stephen Colbert</title>
+  </head>
+  <body>
+    <h1>Edit Appearances</h1>
+    <%= form_for @appearance do |f| %>
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating in: (1..5) %><br>
+    <%= f.collection_select :episode_id, Episode.all, :id, :date %><br>
+    <%= f.collection_select :guest_id, Guest.all, :id, :name %><br>
+    <%= f.submit %>
+    <%end%>
+  </body>
+</html>

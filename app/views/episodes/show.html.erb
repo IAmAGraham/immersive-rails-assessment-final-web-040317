@@ -6,6 +6,6 @@
 
 <ul>
   <% @episode.guests.each do |guest| %>
-    <li><%= link_to guest.name, guest %></li>
+    <li><%= link_to guest.name, guest %> <%= link_to "edit", guest %></li>
   <% end %>
 </ul>
